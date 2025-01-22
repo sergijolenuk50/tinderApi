@@ -19,7 +19,10 @@ cd tinderApi
 py manage.py migrate
 py manage.py createsuperuser
 
-admi
+<!-- admi -->
+
+
+Ol@com.ua
 Qwerty-1
 
 py manage.py startapp users
@@ -37,6 +40,10 @@ pip list
 python manage.py showmigrations 
 <!-- видалити базу -->
 del db.sqlite3 
+
+
+
+
 
 
 

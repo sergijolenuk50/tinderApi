@@ -21,10 +21,13 @@ Including another URLconf
 #     path('admin/', admin.site.urls),
     #django_auth/urls.py
 from django.contrib import admin
-from django.urls import path,include
+from django.urls import path, include
+from users.views import UserCreateView
+
 urlpatterns = [
 path('admin/', admin.site.urls),
-path('accounts/', include('django.contrib.auth.urls')),
+# path('accounts/', include('django.contrib.auth.urls')),
+path('register/', UserCreateView.as_view(), name='register')
 ]
 # ]
 
