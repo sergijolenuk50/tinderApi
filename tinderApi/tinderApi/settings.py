@@ -39,16 +39,19 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'users',
     'rest_framework', 
+    'corsheaders',
+    'rest_framework_simplejwt',
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
+#    'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'tinderApi.urls'
@@ -127,3 +130,26 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 AUTH_USER_MODEL = 'users.CustomUser'
+
+MIDDLEWARE.insert(0, 'corsheaders.middleware.CorsMiddleware')
+
+CSRF_TRUSTED_ORIGINS = [
+    'chrome-extension://coohjcphdfgbiolnekdpbcijmhambjff',
+    # You can add other trusted origins here if needed
+]
+
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:5175",
+    "http://localhost:5173",
+    'chrome-extension://coohjcphdfgbiolnekdpbcijmhambjff',
+]
+
+# settings.py
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    ),
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.AllowAny',
+    ]
+}

@@ -41,14 +41,17 @@ python manage.py showmigrations
 <!-- видалити базу -->
 del db.sqlite3 
 
+pip install django-cors-headers
 
 
-
+pip install djangorestframework djangorestframework-simplejwt
 
 
 git rm -r --cached .
 
+git add .
 
+git commit -m ".gitignore Fixed"
 
 
 
