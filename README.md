@@ -46,6 +46,11 @@ del db.sqlite3
 
 
 
+git rm -r --cached .
+
+
+
+
 
 -------App and Templates--------
 .venv\Scripts\activate.bat
