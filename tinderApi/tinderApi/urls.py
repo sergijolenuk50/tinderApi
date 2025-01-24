@@ -28,7 +28,8 @@ urlpatterns = [
 path('admin/', admin.site.urls),
 path('accounts/', include('django.contrib.auth.urls')),
 path('register/', UserCreateView.as_view(), name='register'),
-path'login/', UserLoginView.as_view(), name='user-login'),
+path('login/', UserLoginView.as_view(), name='login'),
+path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
 ]
 # ]
 

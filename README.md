@@ -58,6 +58,10 @@ git commit -m ".gitignore Fixed"
 
 git config --global user.name
 git config --global user.name "sergijolenuk50"
+git config --global user.email "sergijolenuk50@gmail.com"
+
+
+pip install djangorestframework-simplejwt
 
 
 -------App and Templates--------
