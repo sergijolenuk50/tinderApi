@@ -26,8 +26,9 @@ from users.views import UserCreateView
 
 urlpatterns = [
 path('admin/', admin.site.urls),
-# path('accounts/', include('django.contrib.auth.urls')),
-path('register/', UserCreateView.as_view(), name='register')
+path('accounts/', include('django.contrib.auth.urls')),
+path('register/', UserCreateView.as_view(), name='register'),
+path'login/', UserLoginView.as_view(), name='user-login'),
 ]
 # ]
 

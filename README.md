@@ -55,6 +55,11 @@ git commit -m ".gitignore Fixed"
 
 
 
+
+git config --global user.name
+git config --global user.name "sergijolenuk50"
+
+
 -------App and Templates--------
 .venv\Scripts\activate.bat
 cd myblog

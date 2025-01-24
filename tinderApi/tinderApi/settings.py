@@ -129,7 +129,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 
-AUTH_USER_MODEL = 'users.CustomUser'
+AUTH_USER_MODEL ='users.CustomUser'
 
 MIDDLEWARE.insert(0, 'corsheaders.middleware.CorsMiddleware')
 

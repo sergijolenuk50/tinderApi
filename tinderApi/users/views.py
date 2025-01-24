@@ -8,3 +8,9 @@ from .serializers import CustomUserSerializer
 class UserCreateView(generics.CreateAPIView):  
     queryset = CustomUser.objects.all()  
     serializer_class = CustomUserSerializer  
+
+class UserLoginView(generics.GenericAPIView):
+    permission_classes = [AllowAny]
+    serializer_class = UserLoginSerializer
+
+   
